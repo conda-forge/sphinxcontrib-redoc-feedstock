@@ -1,18 +1,18 @@
 {% set name = "sphinxcontrib-redoc" %}
-{% set version = "1.5.1" %}
+{% set version = "1.6.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "c4fc2b432e08acdffe218b8e523b780eefd572d88de86f0a4afed4afec6e4087"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: e358edbe23927d36432dde748e978cf897283a331a03e93d3ef02e348dee4561
 
 build:
-  noarch: python 
+  noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
@@ -33,13 +33,13 @@ test:
     - sphinxcontrib.redoc
 
 about:
-  home: "https://github.com/ikalnytskyi/sphinxcontrib-redoc"
-  license: "BSD-2-Clause"
-  license_family: "BSD"
-  license_file: "LICENSE"
-  summary: "ReDoc powered OpenAPI (fka Swagger) spec renderer for Sphinx"
-  doc_url: "https://sphinxcontrib-redoc.readthedocs.io"
-  dev_url: "https://github.com/ikalnytskyi/sphinxcontrib-redoc"
+  home: https://github.com/ikalnytskyi/sphinxcontrib-redoc
+  license: BSD-2-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: ReDoc powered OpenAPI (fka Swagger) spec renderer for Sphinx
+  doc_url: https://sphinxcontrib-redoc.readthedocs.io
+  dev_url: https://github.com/ikalnytskyi/sphinxcontrib-redoc
 
 extra:
   recipe-maintainers:
